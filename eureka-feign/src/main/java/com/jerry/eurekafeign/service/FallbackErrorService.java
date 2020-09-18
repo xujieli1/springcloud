@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @Created: 2019/3/4
  * @Modifier:jieli.xu
  * @Updated:2019/3/4
- * @Description:
+ * @Description: 错误回调信息
  * @Version:BUILD1001
  */
 @Component

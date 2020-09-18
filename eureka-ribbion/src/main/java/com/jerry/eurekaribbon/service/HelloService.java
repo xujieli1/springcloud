@@ -6,6 +6,7 @@
 package com.jerry.eurekaribbon.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -26,4 +27,10 @@ public class HelloService {
     public String say(String name){
         return restTemplate.getForObject("http://SERVICE-HI/say/hi?name="+name,String.class);
     }
+
+    public String httpSay(String name){
+        return new RestTemplate().execute("http://SERVICE-HI/say/hi?name="+name, HttpMethod.GET,null,null);
+    }
 }
+
+

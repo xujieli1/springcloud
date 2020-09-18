@@ -3,10 +3,9 @@
  * bianxianmao.com ("Confidential Information"). You shall not disclose such Confidential Information and shall use it
  * only in accordance with the terms of the license agreement you entered into with bianxianmao.com.
  */
-package com.jerry.eurekaribbon.controller;
+package com.jerry.eurekaclient2.controller;
 
-import com.jerry.eurekaribbon.service.HelloService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,11 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("say")
 public class HelloController {
 
-    @Autowired
-    private HelloService helloService;
+    @Value("${server.port}")
+    private int port;
 
     @RequestMapping("/hi")
-    public String sayHi(@RequestParam String name){
-        return helloService.say(name);
+    public String hello(@RequestParam String name){
+        return port+"hello "+name;
     }
 }

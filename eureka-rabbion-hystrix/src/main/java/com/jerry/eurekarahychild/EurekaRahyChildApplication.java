@@ -3,7 +3,7 @@ package com.jerry.eurekarahychild;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+
 public class EurekaRahyChildApplication {
 
 	public static void main(String[] args) {

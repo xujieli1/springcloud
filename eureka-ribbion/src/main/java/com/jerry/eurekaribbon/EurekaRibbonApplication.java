@@ -18,7 +18,7 @@ public class EurekaRibbonApplication {
 	}
 
 	@Bean
-	@LoadBalanced /** 启用负载均衡 **/
+	@LoadBalanced /** 启用负载均衡-否则调用不到服务:这个包位于ribbon里面 **/
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
